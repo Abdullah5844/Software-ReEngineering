@@ -49,7 +49,7 @@ const Body = () => {
   };
   const subjects = useSelector((state) => state.admin.subjects.result);
 
-  const dltSubject = (e) => {
+  const dltSubject = () => {
     setError({});
     setLoading(true);
     dispatch(deleteSubject(checkedValue));

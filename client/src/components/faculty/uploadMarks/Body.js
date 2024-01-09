@@ -53,7 +53,7 @@ const Body = () => {
   };
   const students = useSelector((state) => state.admin.students.result);
 
-  const uploadMarks = (e) => {
+  const uploadMarks = () => {
     setError({});
     dispatch(
       uploadMark(marks, value.department, value.section, value.year, value.test)

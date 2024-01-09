@@ -48,7 +48,7 @@ const Body = () => {
   };
   const students = useSelector((state) => state.admin.students.result);
 
-  const dltAdmin = (e) => {
+  const dltAdmin = () => {
     setError({});
     setLoading(true);
     dispatch(deleteAdmin(checkedValue));

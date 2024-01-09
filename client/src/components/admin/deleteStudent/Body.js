@@ -49,7 +49,7 @@ const Body = () => {
   };
   const students = useSelector((state) => state.admin.students.result);
 
-  const dltStudent = (e) => {
+  const dltStudent = () => {
     setError({});
     setLoading(true);
     dispatch(deleteStudent(checkedValue));

@@ -48,7 +48,7 @@ const Body = () => {
   };
   const faculties = useSelector((state) => state.admin.faculties.result);
 
-  const dltFaculty = (e) => {
+  const dltFaculty = () => {
     setError({});
     setLoading(true);
     dispatch(deleteFaculty(checkedValue));
