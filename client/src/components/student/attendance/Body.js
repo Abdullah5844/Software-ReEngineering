@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { useDispatch, useSelector } from "react-redux";
-import { getSubject } from "../../../redux/actions/adminActions";
-import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../utils/Spinner";
 import { SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
@@ -14,8 +12,6 @@ const Body = () => {
 
   const [loading, setLoading] = useState(false);
   const store = useSelector((state) => state);
-
-  const [search, setSearch] = useState(false);
 
   useEffect(() => {
     if (Object.keys(store.errors).length !== 0) {
