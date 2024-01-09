@@ -71,7 +71,7 @@ const AdminLogin = () => {
                 type="text"
                 required
                 className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
-                placeholder="Username added"
+                placeholder="Username"
               />
             </div>
           </div>
