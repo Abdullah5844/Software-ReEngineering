@@ -3,9 +3,14 @@ import Test from "../../models/test.js";
 
 export const createTest = async (req, res) => {
   try {
+
     const { subjectCode, department, year, section, date, test, totalMarks } =
       req.body;
+
+
+
     const errors = { testError: String };
+
     const existingTest = await Test.findOne({
       subjectCode,
       department,
@@ -14,7 +19,7 @@ export const createTest = async (req, res) => {
       test,
     });
     if (existingTest) {
-      errors.testError = "Given Test is already created";
+      errors.testError = "Given test is Already Created Create a new test ";
       return res.status(400).json(errors);
     }
 
@@ -31,7 +36,7 @@ export const createTest = async (req, res) => {
     await newTest.save();
     return res.status(200).json({
       success: true,
-      message: "Test added successfully",
+      message: "Test added ",
       response: newTest,
     });
   } catch (error) {
