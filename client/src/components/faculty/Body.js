@@ -87,7 +87,7 @@ const Body = () => {
               <div className="mx-5 mt-5 space-y-3 overflow-y-auto h-[12rem]">
                 {!open ? (
                   notices?.map((notice, idx) => (
-                    <div
+                    <div key={idx}
                       onClick={() => {
                         setOpen(true);
                         setOpenNotice(notice);
