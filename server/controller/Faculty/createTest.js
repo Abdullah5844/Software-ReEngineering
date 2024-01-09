@@ -19,7 +19,7 @@ export const createTest = async (req, res) => {
       test,
     });
     if (existingTest) {
-      errors.testError = "Given test is Already Created Create a new test ";
+      errors.testError = "Given test is Already Created Create a New Test ";
       return res.status(400).json(errors);
     }
 
@@ -36,7 +36,7 @@ export const createTest = async (req, res) => {
     await newTest.save();
     return res.status(200).json({
       success: true,
-      message: "Test added ",
+      message: "Test added successfully",
       response: newTest,
     });
   } catch (error) {
