@@ -9,11 +9,11 @@ import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import { ATTENDANCE_MARKED, SET_ERRORS } from "../../../redux/actionTypes";
-import { getTest } from "../../../redux/actions/facultyActions";
+// import { getTest } from "../../../redux/actions/facultyActions";
 import { getSubject } from "../../../redux/actions/adminActions";
 const Body = () => {
   const dispatch = useDispatch();
-  const user = JSON.parse(localStorage.getItem("user"));
+  // const user = JSON.parse(localStorage.getItem("user"));
   const departments = useSelector((state) => state.admin.allDepartment);
   const subjects = useSelector((state) => state.admin.subjects.result);
 
@@ -60,7 +60,7 @@ const Body = () => {
   };
   const students = useSelector((state) => state.admin.students.result);
 
-  const uploadAttendance = (e) => {
+  const uploadAttendance = () => {
     setError({});
     dispatch(
       markAttendance(

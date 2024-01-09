@@ -5,7 +5,6 @@ import Sidebar from "../Sidebar";
 import { useDispatch } from "react-redux";
 import {
   getAllDepartment,
-  getAllSubject,
 } from "../../../redux/actions/adminActions";
 
 const MarkAttendance = () => {

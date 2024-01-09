@@ -36,6 +36,7 @@ const Body = () => {
   useEffect(() => {
     if (Object.keys(store.errors).length !== 0) {
       setError(store.errors);
+      console.log(error);
     }
   }, [store.errors]);
 

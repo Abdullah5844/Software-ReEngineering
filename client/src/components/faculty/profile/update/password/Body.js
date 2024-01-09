@@ -4,7 +4,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Spinner from "../../../../../utils/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { adminUpdatePassword } from "../../../../../redux/actions/adminActions";
+// import { adminUpdatePassword } from "../../../../../redux/actions/adminActions";
 import * as classes from "../../../../../utils/styles";
 import { facultyUpdatePassword } from "../../../../../redux/actions/facultyActions";
 const Body = () => {
