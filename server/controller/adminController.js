@@ -130,7 +130,6 @@ export const addAdmin = async (req, res) => {
 
     var username = components.join("");
     let hashedPassword;
-    const newDob = dob.split("-").reverse().join("-");
 
     hashedPassword = await bcrypt.hash(email, 10);
     var passwordUpdated = false;
@@ -261,7 +260,6 @@ export const addFaculty = async (req, res) => {
 
     var username = components.join("");
     let hashedPassword;
-    const newDob = dob.split("-").reverse().join("-");
 
     hashedPassword = await bcrypt.hash(email, 10);
     var passwordUpdated = false;
@@ -406,7 +404,7 @@ export const getAdmin = async (req, res) => {
 export const deleteAdmin = async (req, res) => {
   try {
     const admins = req.body;
-    const errors = { noAdminError: String };
+    //const errors = { noAdminError: String };
     for (var i = 0; i < admins.length; i++) {
       var admin = admins[i];
    
@@ -422,7 +420,7 @@ export const deleteAdmin = async (req, res) => {
 export const deleteFaculty = async (req, res) => {
   try {
     const faculties = req.body;
-    const errors = { noFacultyError: String };
+   // const errors = { noFacultyError: String };
     for (var i = 0; i < faculties.length; i++) {
       var faculty = faculties[i];
  
@@ -438,7 +436,7 @@ export const deleteFaculty = async (req, res) => {
 export const deleteStudent = async (req, res) => {
   try {
     const students = req.body;
-    const errors = { noStudentError: String };
+   // const errors = { noStudentError: String };
     for (var i = 0; i < students.length; i++) {
       var student = students[i];
    
@@ -454,7 +452,7 @@ export const deleteStudent = async (req, res) => {
 export const deleteSubject = async (req, res) => {
   try {
     const subjects = req.body;
-    const errors = { noSubjectError: String };
+   // const errors = { noSubjectError: String };
     for (var i = 0; i < subjects.length; i++) {
       var subject = subjects[i];
 
@@ -523,7 +521,6 @@ export const addStudent = async (req, res) => {
 
     var username = components.join("");
     let hashedPassword;
-    const newDob = dob.split("-").reverse().join("-");
 
     hashedPassword = await bcrypt.hash(email, 10);
     var passwordUpdated = false;
@@ -569,7 +566,7 @@ export const addStudent = async (req, res) => {
 
 export const getStudent = async (req, res) => {
   try {
-    const { department, year, section } = req.body;
+    const { department, year } = req.body;
     const errors = { noStudentError: String };
     const students = await Student.find({ department, year });
 

@@ -137,7 +137,6 @@ export const createTest = async (req, res) => {
     });
 
     await newTest.save();
-    const students = await Student.find({ department, year, section });
     return res.status(200).json({
       success: true,
       message: "Test added successfully",

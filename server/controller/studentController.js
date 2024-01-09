@@ -1,4 +1,4 @@
-import student from "../models/student.js";
+
 import Test from "../models/test.js";
 import Student from "../models/student.js";
 import Subject from "../models/subject.js";
@@ -177,7 +177,6 @@ export const testResult = async (req, res) => {
 export const attendance = async (req, res) => {
   try {
     const { department, year, section } = req.body;
-    const errors = { notestError: String };
     const student = await Student.findOne({ department, year, section });
 
     const attendence = await Attendence.find({
