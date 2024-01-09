@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
@@ -9,7 +9,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
-import { setRef } from "@mui/material";
+
 const isNotActiveStyle =
   "flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize hover:bg-gray-200 py-2 my-1";
 const isActiveStyle =
