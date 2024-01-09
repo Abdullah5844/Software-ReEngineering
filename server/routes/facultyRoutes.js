@@ -22,5 +22,3 @@ router.post("/uploadmarks", auth, uploadMarks);
 router.post("/markattendance", auth, markAttendance);
 
 export default router;
-
-//router files 
