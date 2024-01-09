@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createTest } from "../../../redux/actions/facultyActions";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
+
 import Spinner from "../../../utils/Spinner";
 import { ADD_TEST, SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
@@ -25,6 +26,7 @@ const Body = () => {
 
   useEffect(() => {
     if (Object.keys(store.errors).length !== 0) {
+
       setError(store.errors);
       setValue({
         subjectCode: "",
@@ -113,7 +115,7 @@ const Body = () => {
                 </div>
 
                 <div className={classes.adminForm3}>
-                  <h1 className={classes.adminLabel}>Department :</h1>
+                  <h1 className={classes.adminLabel}>Department Name :</h1>
 
                   <input
                     required
