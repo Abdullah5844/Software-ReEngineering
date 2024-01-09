@@ -1,11 +1,10 @@
 import express from "express";
-import {
-  studentLogin,
-  updatedPassword,
-  updateStudent,
-  testResult,
-  attendance,
-} from "../controller/studentController.js";
+import { studentLogin } from "../controller/Student/studentLogin.js";
+import { updatedPassword } from "../controller/Student/updatedPassword.js"; 
+import { updateStudent } from "../controller/Student/updateStudent.js";
+import { testResult } from "../controller/Student/testResult.js";
+import { attendance } from "../controller/Student/attendance.js";
+
 import auth from "../middleware/auth.js";
 
 const router = express.Router();
